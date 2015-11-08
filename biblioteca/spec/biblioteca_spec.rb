@@ -1,8 +1,14 @@
 require 'spec_helper'
-require 'biblioteca'
+require 'bib'
 
-RSpec.describe Biblioteca do
-	it "¿existe?" do
-		bib = Biblioteca.new
+describe Libro do
+	before :each do
+		@Libro = Libro.new
 	end
+	describe "#new" do
+		it "takes three parameters and returns a Book object" do
+			@Libro.should be_an_instance_of Libro
+		end
+	end
+	
 end
