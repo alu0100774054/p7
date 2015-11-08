@@ -3,7 +3,8 @@ require 'bib'
 
 describe Libro do
 	before :each do
-		@Libro = Libro.new(:autor)
+		@Libro = Libro.new("titulo","editorial")
+		@Libro.set_autor("autor_ejemplo")
 	end
 	describe "#new" do
 		it "recibe un parametro y crea un objeto tipo Libro" do
@@ -11,6 +12,9 @@ describe Libro do
 		end
 		it "recibe el autor" do
 			@Libro.autor.should have_at_least(1).items
+		end
+		it "devuelve el titulo" do
+			@Libro.titulo.should eql "titulo"
 		end
 	end
 	
