@@ -3,11 +3,11 @@ require 'bib'
 
 describe Libro do
 	before :each do
-		@Libro = Libro.new("titulo", "editorial", "edicion1")
+		@Libro = Libro.new("titulo", "editorial", "edicion1", "fecha")
 		@Libro.set_autor("autor_ejemplo")
 	end
 	describe "#new" do
-		it "recibe un parametro y crea un objeto tipo Libro" do
+		it "recibe parametros y crea un objeto tipo Libro" do
 			@Libro.should be_an_instance_of Libro
 		end
 		it "recibe el autor" do
@@ -18,6 +18,9 @@ describe Libro do
 		end
 		it "devuelve el numero de edicion" do
 			@Libro.nEdicion.should eql "edicion1"
+		end
+		it "devuelve la fecha" do
+			@Libro.fecha.should eql "fecha"
 		end
 	end
 	
