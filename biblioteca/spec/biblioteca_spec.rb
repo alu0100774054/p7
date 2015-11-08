@@ -3,7 +3,7 @@ require 'bib'
 
 describe Libro do
 	before :each do
-		@Libro = Libro.new("titulo","editorial")
+		@Libro = Libro.new("titulo", "editorial", "edicion1")
 		@Libro.set_autor("autor_ejemplo")
 	end
 	describe "#new" do
@@ -15,6 +15,9 @@ describe Libro do
 		end
 		it "devuelve el titulo" do
 			@Libro.titulo.should eql "titulo"
+		end
+		it "devuelve el numero de edicion" do
+			@Libro.nEdicion.should eql "edicion1"
 		end
 	end
 	
