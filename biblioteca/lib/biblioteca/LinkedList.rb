@@ -1,13 +1,7 @@
 require 'biblioteca/version'
-require 'biblioteca/biblioteca'
 
-class Node
-
-    attr_accessor :value, :next_node
-
-    def initialize val,next_in_line
-        @value = val
-        @next_nodex = next_in_line
-        puts "Initialized a Node with value:  " + value.to_s 
+class LinkedList
+    def initialize val
+        @head = Node.new(val,nil)
     end
 end

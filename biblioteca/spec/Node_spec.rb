@@ -1,13 +1,13 @@
 require 'spec_helper'
 require 'bib'
 
-describe LinkedList do 
+describe Node do 
 	before :each do 
-		@List = LinkedList.new(2)
+		@Node = Node.new(2,nil)
 	end
 	describe "#new" do
 		it "recibe parametros y crea un objeto tipo Node" do
-			@List.should be_an_instance_of LinkedList
+			@Node.should be_an_instance_of Node
 		end
 	end
 end
