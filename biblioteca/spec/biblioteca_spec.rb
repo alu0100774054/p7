@@ -25,6 +25,5 @@ describe Libro do
 		it "recibe el autor" do
 			@Libro.autor.should have_at_least(1).items
 		end
-	end
-	
+	end	
 end
