@@ -10,4 +10,9 @@ describe LinkedList do
 			@List.should be_an_instance_of LinkedList
 		end
 	end
+	describe "#add" do
+		it "inserta un elemento en la LinkedList" do 
+			@List.add(3)
+		end
+	end
 end
