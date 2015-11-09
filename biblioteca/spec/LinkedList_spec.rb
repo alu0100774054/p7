@@ -15,4 +15,10 @@ describe LinkedList do
 			@List.add(3)
 		end
 	end
+	describe "#delete" do
+		it "borra un valor en la lista especificado por parametro" do
+			@List.delete(3)
+		end
+	end
+
 end
