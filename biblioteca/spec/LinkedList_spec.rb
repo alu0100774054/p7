@@ -19,6 +19,9 @@ describe LinkedList do
 		it "borra un valor en la lista especificado por parametro" do
 			@List.delete(3)
 		end
+		it "borra el primer elemento de la lista" do
+			@List.delete_first()
+		end
 	end
 
 end

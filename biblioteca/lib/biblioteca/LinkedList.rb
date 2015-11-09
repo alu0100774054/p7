@@ -27,4 +27,23 @@ class LinkedList
             end
         end
     end
+    def delete_first()
+    	current = @head
+    	if current.next_node == nil
+    		puts "Lista Vacía"
+    	else
+    		@head = head.next_node
+    		@current.next_node = nil
+    	end
+    end
+    def display
+        current = @head
+        full_list = [] 
+        while current.next_node != nil 
+            full_list += [current.value.to_s]
+            current = current.next_node
+        end
+        full_list += [current.value.to_s]
+        puts full_list.join("->")
+    end
 end
