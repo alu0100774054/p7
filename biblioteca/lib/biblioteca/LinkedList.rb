@@ -4,6 +4,9 @@ class LinkedList
     def initialize val
         @head = Node.new(val,nil)
     end
+    def get_head
+    	return @head
+    end
     def add(value)
         current = @head
         while current.next_node != nil
