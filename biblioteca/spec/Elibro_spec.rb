@@ -9,8 +9,8 @@ describe Elibro do
 		it "recibe parametros y crea un objeto tipo Elibro" do
 			@Elibro.should be_an_instance_of Elibro
 		end
-		#it "devuelve el issn" do
-		#	@Elibro.get_issn.should eql "issn"
-		#end
+		it "Elibro hereda de Libro?" do
+			@Elibro.is_a? Libro
+		end
 	end	
 end
