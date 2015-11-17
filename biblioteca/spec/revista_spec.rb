@@ -3,7 +3,7 @@ require 'bib'
 
 describe Revista do
 	before :each do
-		@Revista = Revista.new("issn")
+		@Revista = Revista.new("titulo", "editorial", "edicion1", "fecha","issn")
 	end
 	describe "#new" do
 		it "recibe parametros y crea un objeto tipo Revista" do

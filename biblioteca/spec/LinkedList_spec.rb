@@ -56,8 +56,12 @@ describe LinkedList do
 		@Libro5.set_autor("Richard E. Silverman")
 		@Libro5.set_isbn("ISBN-13: 978-1449325862")
 		@Libro5.set_isbn("ISBN-10: 1449325866")
-
-		@Node1 = Node.new(nil,@Libro1,nil)
+		
+		@Revista1 = Revista.new("The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends (The Facets of Ruby)",
+							 "Pragmatic Bookshelf", 
+							 "1 edition", 
+							 "December 25, 2010","12345678")
+		@Node1 = Node.new(nil,@Revista1,nil)
 		@Node2 = Node.new(@node1,@Libro2,nil)
 		@List = LinkedList.new(@Node)
 	end
