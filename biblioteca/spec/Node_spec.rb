@@ -3,7 +3,7 @@ require 'bib'
 
 describe Node do 
 	before :each do 
-		@Node = Node.new(2,nil)
+		@Node = Node.new(nil,2,nil)
 	end
 	describe "#new" do
 		it "recibe parametros y crea un objeto tipo Node" do
