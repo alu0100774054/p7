@@ -2,7 +2,7 @@ require 'biblioteca/version'
 
 class LinkedList
     def initialize val
-        @head = Node.new(val,nil)
+        @head = Node.new(nil,val,nil)
     end
     def get_head
     	return @head
@@ -12,7 +12,7 @@ class LinkedList
         while current.next_node != nil
             current = current.next_node
         end 
-        current.next_node = Node.new(value,nil)
+        current.next_node = Node.new(current,value,nil)
         self    
     end
     def delete(val)

@@ -3,11 +3,12 @@ require 'biblioteca/biblioteca'
 
 class Node
 
-    attr_accessor :value, :next_node
+    attr_accessor :value, :next_node, :before_node
 
-    def initialize val,next_in_line
+    def initialize val,next_in_line,before_in_line
         @value = val
-        @next_nodex = next_in_line
+        @next_node = next_in_line
+        @before_node = before_in_line
         puts "Initialized a Node with value:  " + value.to_s 
     end
 end
