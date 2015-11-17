@@ -9,8 +9,8 @@ describe Revista do
 		it "recibe parametros y crea un objeto tipo Revista" do
 			@Revista.should be_an_instance_of Revista
 		end
-		#it "devuelve el issn" do
-		#	@Revista.get_issn.should eql "issn"
-		#end
+		it "Revista hereda de Libro?" do
+			@Revista.is_a? Libro
+		end
 	end	
 end
