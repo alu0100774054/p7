@@ -40,14 +40,14 @@ require 'biblioteca/version'
         	return nil unless other.instance_of? Libro
         	@titulo <=> other.titulo
     	end
-    	def each
-	        yield @autor
-	        yield @titulo
-	        yield @editorial
-	        yield @nEdicion
-	        yield @fecha
-	        yield @isbn
-    	end
+    	#def each
+	     #   yield @autor
+	     #   yield @titulo
+	      #  yield @editorial
+	       # yield @nEdicion
+	       # yield @fecha
+	        #yield @isbn
+    	#end
 	end
 #end
 

@@ -1,6 +1,7 @@
 require 'biblioteca/version'
 
 class LinkedList
+    include Enumerable
     def initialize val
         @head = Node.new(nil,val,nil)
     end
@@ -49,4 +50,7 @@ class LinkedList
         full_list += [current.value.to_s]
         puts full_list.join("->")
     end
+    #def each
+     #   yield @head 
+    #end
 end

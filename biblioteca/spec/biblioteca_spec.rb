@@ -5,6 +5,9 @@ describe Libro do
 	before :each do
 		@Libro = Libro.new("titulo", "editorial", "edicion1", "fecha")
 		@Libro.set_autor("autor_ejemplo")
+		@Libro1 = Libro.new("titulo1", "editorial1", "edicion2", "fecha1")
+		@Libro1.set_autor("autor_ejemplo1")
+
 	end
 	describe "#new" do
 		it "recibe parametros y crea un objeto tipo Libro" do
@@ -26,4 +29,9 @@ describe Libro do
 			@Libro.autor.should have_at_least(1).items
 		end
 	end	
+	 context "Comparable" do
+        it "Libro1 > Libro2, según el titulo" do
+            expect(@Libro > @Libro1).to eq(true)
+        end
+    end
 end
