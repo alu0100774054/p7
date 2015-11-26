@@ -1,6 +1,7 @@
 require 'biblioteca/version'
 #module Biblioteca
 	class Libro
+		include Comparable
 		attr_accessor :autor, :titulo, :editorial, :nEdicion, :fecha, :isbn
 		def initialize titulo, editorial, nEdicion, fecha
 			@autor = []
@@ -34,6 +35,19 @@ require 'biblioteca/version'
 		def get_fecha()
 			return @fecha
 		end
+
+		def <=>(other)
+        	return nil unless other.instance_of? Libro
+        	@titulo <=> other.titulo
+    	end
+    	def each
+	        yield @autor
+	        yield @titulo
+	        yield @editorial
+	        yield @nEdicion
+	        yield @fecha
+	        yield @isbn
+    	end
 	end
 #end
 
