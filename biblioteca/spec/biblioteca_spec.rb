@@ -31,7 +31,7 @@ describe Libro do
 	end	
 	 context "Comparable" do
         it "Libro1 > Libro2, según el titulo" do
-            expect(@Libro > @Libro1).to eq(true)
+            expect(@Libro1 > @Libro).to eq(true)
         end
     end
 end
