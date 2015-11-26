@@ -92,5 +92,13 @@ describe LinkedList do
 			@List.should be_true
 		end
 	end
+	describe "Enumerable" do
+        it"comprobando any?" do
+            expect(@list.any?).to eq(true)
+        end
+        it "Comprobando count" do
+            expect(@list.count).to eq(1) 
+        end
+    end
 
 end
