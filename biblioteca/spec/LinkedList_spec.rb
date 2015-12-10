@@ -69,7 +69,7 @@ describe LinkedList do
 							 "http://www.amazon.es/The-RSpec-Book-Behaviour-Development/dp/1934356379")
 		@Node1 = Node.new(nil,@Revista1,nil)
 		@Node2 = Node.new(@node1,@Revista2,nil)
-		@List = LinkedList.new(@Node)
+		@List = LinkedList.new(@Node1)
 	end
 	describe "#new" do
 		it "recibe parametros y crea un objeto tipo Node" do
@@ -94,10 +94,10 @@ describe LinkedList do
 	end
 	describe "Enumerable" do
         it"comprobando any?" do
-          #  expect(@list.any?).to eq(true)
+           expect(@list.any?).to eq(true)
         end
         it "Comprobando count" do
-           #expect(@list.count).to eq(1) 
+           expect(@list.count).to eq(1) 
         end
     end
 
