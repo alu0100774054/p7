@@ -33,10 +33,10 @@ class LinkedList
     end
     def delete_first()
     	current = @head
-    	if current.next_node == nil
+    	if @head.next_node == nil
     		puts "Lista Vacía"
     	else
-    		@head = head.next_node
+    		@head = @head.next_node
     		@current.next_node = nil
     	end
     end
@@ -53,8 +53,8 @@ class LinkedList
     def each
         current = @head
         while current.next_node != nil
-            current = current.next_node
             yield current
+            current = current.next_node
         end 
     end
 end
