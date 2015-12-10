@@ -50,7 +50,11 @@ class LinkedList
         full_list += [current.value.to_s]
         puts full_list.join("->")
     end
-    #def each
-     #   yield @head 
-    #end
+    def each
+        current = @head
+        while current.next_node != nil
+            yield
+            current = current.next_node
+        end 
+    end
 end
