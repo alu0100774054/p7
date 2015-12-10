@@ -53,7 +53,11 @@ class LinkedList
     def each
         current = @head
         while current.next_node != nil
+<<<<<<< HEAD
             yield current
+=======
+            yield
+>>>>>>> origin/master
             current = current.next_node
         end 
     end

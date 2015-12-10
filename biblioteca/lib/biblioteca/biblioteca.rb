@@ -41,12 +41,16 @@ require 'biblioteca/version'
         	@titulo <=> other.titulo
     	end
     	def each
-	       yield @autor
+    		@autor.each do |i|
+    			yield i
+    		end
 	       yield @titulo
 	       yield @editorial
 	       yield @nEdicion
 	       yield @fecha
-	       yield @isbn
+	       @isbn.each do |i|
+    			yield i
+    		end
     	end
 	end
 #end
