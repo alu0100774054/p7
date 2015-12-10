@@ -62,22 +62,22 @@ describe LinkedList do
 							 "1 edition", 
 							 "December 25, 2010",
 							 "12345678")
-<<<<<<< HEAD
+
 		@Elibro1 = Revista.new("The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends (The Facets of Ruby)",
-=======
+
 		@Elibro1 = Elibro.new("The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends (The Facets of Ruby)",
->>>>>>> origin/master
+
 							 "Pragmatic Bookshelf", 
 							 "1 edition", 
 							 "December 25, 2010",
 							 "http://www.amazon.es/The-RSpec-Book-Behaviour-Development/dp/1934356379")
 		@Node1 = Node.new(nil,@Libro1,nil)
 		@Node2 = Node.new(@node1,@Libro2,nil)
-<<<<<<< HEAD
+
 		@List = LinkedList.new(@Node1)
-=======
+
 		@List = LinkedList.new(@Node)
->>>>>>> origin/master
+
 	end
 	describe "#new" do
 		it "recibe parametros y crea un objeto tipo Node" do
@@ -86,40 +86,33 @@ describe LinkedList do
 	end
 	describe "#add" do
 		it "inserta un elemento en la LinkedList" do 
-<<<<<<< HEAD
+
 			#@List.add(@Node2)
-=======
+
 			@List.add(@Node2)
->>>>>>> origin/master
 			#@List.should be_true
 		end
 	end
 	describe "#delete" do
 		it "borra un valor en la lista especificado por parametro" do
-<<<<<<< HEAD
 			#@List.delete(@Node2)
 			#@List.should be_true
 		end
 		it "borra el primer elemento de la lista" do
 			#@List.delete_first()
-=======
 			@List.delete(@Node2)
 			#@List.should be_true
 		end
 		it "borra el primer elemento de la lista" do
 			@List.delete_first()
->>>>>>> origin/master
 			#@List.should be_true
 		end
 	end
 	describe "Enumerable" do
-<<<<<<< HEAD
         it"comprobando any?" do
            #expect(@list.any?).to eq(true)
-=======
         it "comprobando any?" do
             expect(@list.any?).to eq(true)
->>>>>>> origin/master
         end
         it "Comprobando count" do
            #expect(@list.count).to eq(1) 
