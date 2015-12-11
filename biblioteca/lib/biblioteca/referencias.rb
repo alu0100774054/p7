@@ -1,6 +1,7 @@
 require 'biblioteca/version'
 
 class Referencias
+	include Comparable
 	attr_accessor :autorNombre, :autorApellido, :titulo, :fecha, :lugar_publicacion, :editorial, :nEdicion, :volumen, :APA
 
 	def initialize(titulo, fecha, lugar_publicacion=nil, editorial, nEdicion, volumen)
@@ -61,4 +62,30 @@ class Referencias
 		set_lugar_publicacion_APA
 		set_editorial_APA
 	end
+	def get_APA
+		puts @APA
+	end
+	def <=>(other)
+		if(@autorNombre == other.autorNombre)
+			if(@fecha == other.fecha)
+				if(@titulo == other.titulo)
+					return 0 #Son iguales
+				else
+						if (@titulo.size >= other.titulo.size)
+							return -1
+						end
+						return 1
+				end
+			elsif fecha >= other.fecha
+				return -1
+			else
+				return 1
+			end
+		else
+			if (@autorNombre.size >= other.autorNombre.size)
+				return -1
+			end
+				return 1
+		end
+	end	
 end
