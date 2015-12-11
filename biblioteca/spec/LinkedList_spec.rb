@@ -4,6 +4,7 @@ require 'bib'
 describe LinkedList do 
 	before :all do
 		#Libro 1
+=begin
 		@Libro1 = Libro.new("Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide. (The Facets of Ruby)",
 							 "Pragmatic Bookshelf", 
 							 "4 edition", 
@@ -71,9 +72,18 @@ describe LinkedList do
 							 "1 edition", 
 							 "December 25, 2010",
 							 "http://www.amazon.es/The-RSpec-Book-Behaviour-Development/dp/1934356379")
+=end
+		@libro1=Referencias.new("Mi cumpleaños",
+								"21-09-1994",
+								"tenerife",
+								"mi casa",
+								"primera vida",
+								"mi volumen")
+		@libro1.set_autor("Erik","Barreto")
+		@libro1.set_autor("Juan","Vicente")
+		@libro1.set_autor("Maria","Isabel")
+		@libro1.poner_APA
 		@Node1 = Node.new(nil,@Libro1,nil)
-		@Node2 = Node.new(@node1,@Libro2,nil)
-
 		@List = LinkedList.new(@Node1)
 	end
 	describe "#new" do
