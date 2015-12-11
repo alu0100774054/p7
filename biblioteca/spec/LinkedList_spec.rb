@@ -75,9 +75,6 @@ describe LinkedList do
 		@Node2 = Node.new(@node1,@Libro2,nil)
 
 		@List = LinkedList.new(@Node1)
-
-		@List = LinkedList.new(@Node)
-
 	end
 	describe "#new" do
 		it "recibe parametros y crea un objeto tipo Node" do
@@ -88,8 +85,6 @@ describe LinkedList do
 		it "inserta un elemento en la LinkedList" do 
 
 			#@List.add(@Node2)
-
-			@List.add(@Node2)
 			#@List.should be_true
 		end
 	end
@@ -100,23 +95,15 @@ describe LinkedList do
 		end
 		it "borra el primer elemento de la lista" do
 			#@List.delete_first()
-			@List.delete(@Node2)
-			#@List.should be_true
-		end
-		it "borra el primer elemento de la lista" do
-			@List.delete_first()
 			#@List.should be_true
 		end
 	end
 	describe "Enumerable" do
         it"comprobando any?" do
            #expect(@list.any?).to eq(true)
-        it "comprobando any?" do
-            expect(@list.any?).to eq(true)
         end
         it "Comprobando count" do
            #expect(@list.count).to eq(1) 
         end
     end
-
 end
